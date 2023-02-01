@@ -5,7 +5,7 @@
 }
 body{
    font-family: 'Open Sans', sans-serif;
-   transition: all .5s;
+   transition: .5s;
 }
 i{
    color: #F52453;
@@ -29,7 +29,6 @@ a{
 .navbar{
    width: 75%;
    margin: auto;
-
 }
 .site-name{
    color: #F52453;
@@ -39,16 +38,11 @@ a{
 .site-name i{
    font-size: 35px;
 }
-.navbar img{
-   margin: 5px 0;
-   float: left;
-}
 .navLinks{
    list-style: none;
    text-align: right;
    font-size: 18px;
 }
-
 .navLinks li{
    display: inline-block;
    cursor: pointer;
@@ -134,7 +128,6 @@ a{
    padding: 100px 0;
    overflow: auto;
 }
-
 .title-line{
    position: relative;
    margin-bottom: 70px;
@@ -155,13 +148,12 @@ a{
    left: 50%;
    transform: translate(-50%);
 }
-
 .line-left::before{
    left: 0;
 }
 
-/* ------------------------------ section 01 Welcome To Website ------------------------------ */
 
+/* ------------------------------ section 01 Welcome To Website ------------------------------ */
 .welcome{
    overflow: auto;
    padding-top: 60px;
@@ -174,7 +166,6 @@ a{
    border-radius: 50%;
    margin: -70px auto 20px auto;
 }
-
 .welcome-icons i{
    color: white;
    font-size: 50px;
@@ -236,8 +227,8 @@ a{
    visibility: visible;
    width: 100%;
    height: 100%;
+   opacity: 1;
 }
-
 .featured-overlay{
    background-color: rgba(0, 0, 0, 0.507);
    width: 0;
@@ -246,10 +237,13 @@ a{
    top: 0;
    left: 0;
    visibility: hidden;
-   transition: all 0.8s;
+   opacity: 0.5;
+   transition: 0.8s;
 }
 .featured-overlay:hover .featured-content{
    visibility: visible;
+   opacity: 1;
+   transform: translate( -50%, -50%) ;
    width: auto;
    height: auto;
 }
@@ -259,12 +253,12 @@ a{
    left: 50%;
    color: white;
    text-align: center;
-
    visibility: hidden;
+   opacity: 0;
    width: auto;
    height: 0;
-   transform: translate( -50%, -50%) ;
-   transition: all 0.5s;
+   transform: translate( -50%, -25%) ;
+   transition: 0.8s;
 }
 .featured-card p{
    margin: 15px 0;
@@ -285,15 +279,13 @@ a{
 .offer-card{
    width: 30%;
    float: left;
-   border: 1px solid black;
+   border: 1px solid #a1a1a1;
    padding: 20px 20px 20px 70px;
    text-align: left;
    position: relative;
    margin-bottom: 40px;
    transition: .4s;
-
 }
-
 .offer-card:hover {
    background-color: #292b33;
    border-radius: 15px;
@@ -327,7 +319,6 @@ a{
    overflow: auto;
    text-align: start;
 }
-
 .chooseUs-services{
    width: 50%;
    float: left;
@@ -337,11 +328,13 @@ a{
    margin-left: 0;
 }
 .chooseUs-services ul{
-   margin-top: 20px;
    list-style: none;
+   margin-top: 20px;
    line-height: 2;
 }
-
+.chooseUs-services i {
+   margin-right: 10px;
+}
 .services-img{
    width: 50%;
    float: left;
@@ -356,8 +349,6 @@ a{
    cursor: pointer;
    color: #F52453;
 }
-
-
 
 
 
@@ -379,9 +370,7 @@ a{
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.548);
-
    color: white;
-
    overflow: auto;
 }
 .statics{
@@ -404,9 +393,7 @@ a{
 
 
 
-
 /* ------------------------------ section 06 pricing ------------------------------ */
-
 .pricing-plan{
    width: 32%;
    border-radius: 10px;
@@ -508,10 +495,8 @@ hr{
    width: 70px;
    height: 70px;
    border-radius: 50%;
-   background-image: url(../images/eng\ islam.jpg);
-   background-size: cover;
-   background-position: center;
    float: left;
+   overflow: hidden;
 }
 .employee-info{
    float: left;
@@ -523,10 +508,7 @@ hr{
 
 
 
-
-
 /* ------------------------------ section 08 Our Team ------------------------------ */
-
 .team{
    overflow: auto;
    text-transform: capitalize;
@@ -537,7 +519,6 @@ hr{
    padding: 15px;
    float: left;
 }
-
 .team-card:hover h4{
    color: white;
 }
@@ -593,7 +574,7 @@ hr{
    display: block;
    width: 35px;
    height: 35px;
-   padding: 10px;
+   line-height: 35px;
    margin-left: auto;
    background-color: #F52453;
 }
@@ -654,6 +635,7 @@ hr{
    text-decoration: underline;
 }
 
+
 /* ------------------------------ section 08 Recent News ------------------------------ */
 .footer-bg{
    background-color: #292b33;
@@ -694,7 +676,6 @@ hr{
 .social-contact i:hover{
    background-color: #F52453;
 }
-
 .footer-contact{
    width: 50%;
    float: left;
@@ -715,7 +696,6 @@ input, textarea{
    margin-top: 0%;
    color: white;
 }
-
 .copyright{
    background-color: #191a1f;
    color: gray;
