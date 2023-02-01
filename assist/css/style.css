@@ -34,6 +34,7 @@ a{
 .site-name{
    color: #F52453;
    float: left;
+   font-weight: bold;
 }
 .site-name i{
    font-size: 35px;
@@ -50,6 +51,7 @@ a{
 
 .navLinks li{
    display: inline-block;
+   cursor: pointer;
 }
 .navLinks a{
    color: white;
@@ -385,7 +387,7 @@ a{
 .statics{
    overflow: auto;
    width: 75%;
-   margin: 100px auto;
+   margin: 100px auto 0;
    text-align: center;
 }
 .static-card{
@@ -427,6 +429,7 @@ a{
    background-color: rgba(245, 36, 83, 0.82);
    line-height: 2.3;
    color: white;
+   position: relative;
 }.pricing-plan2:hover{
    background-color: #f52453;
 }
@@ -445,17 +448,19 @@ a{
    background-color: #292b33;
 }
 .pricing-period{
-   margin: -20px 0 20px 100px;
+   margin: -20px 0 0 100px;
 }
 .price{
    color: white;
+}
+.price-benefits{
+   margin: 30px auto;
 }
 .price-btn{
    padding: 10px 20px;
    font-size: 15px;
    border-radius: 5px;
    border: 0;
-   margin-top: 20px;
    cursor: pointer;
 }
 .price-btn:hover{
@@ -476,7 +481,7 @@ hr{
 
 /* ------------------------------ section 07 employee info ------------------------------ */
 .employee-bg{
-   height: 222px;
+   height: 230px;
    background-image: url(../images/statics.jpg);
    background-attachment: fixed;
    background-size: cover;
@@ -485,8 +490,7 @@ hr{
 }
 .section-employee{
    width: 75%;
-   margin: 50px auto;
-   /* padding: 70px 0; */
+   margin: 50px auto 0;
    overflow: auto;
 }
 .info-half{
@@ -504,11 +508,9 @@ hr{
    width: 70px;
    height: 70px;
    border-radius: 50%;
-
    background-image: url(../images/eng\ islam.jpg);
    background-size: cover;
    background-position: center;
-
    float: left;
 }
 .employee-info{
