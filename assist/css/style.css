@@ -1,0 +1,721 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   font-family: 'Open Sans', sans-serif;
+   transition: all .5s;
+}
+i{
+   color: #F52453;
+}
+a{
+   color: #3e3eff;
+   text-decoration: none;
+}
+
+/* ------------------------------ navbar ------------------------------ */
+.navbar-main{
+   height: 60px;
+   width: 100%;
+   background-color: rgb(0 0 0 / 64%);
+   overflow: auto;
+   position: fixed;
+   z-index: 99;
+   line-height: 40px;
+   padding: 10px 0;
+}
+.navbar{
+   width: 75%;
+   margin: auto;
+
+}
+.site-name{
+   color: #F52453;
+   float: left;
+}
+.site-name i{
+   font-size: 35px;
+}
+.navbar img{
+   margin: 5px 0;
+   float: left;
+}
+.navLinks{
+   list-style: none;
+   text-align: right;
+   font-size: 18px;
+}
+
+.navLinks li{
+   display: inline-block;
+}
+.navLinks a{
+   color: white;
+   text-decoration: none;
+   position: relative;
+   margin: 0 20px;
+}
+.navLinks a::before{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -8px;
+   width: 0;
+   height: 4px;
+   background-color: #F52453;
+   transition: .4s;
+}
+.navLinks li:hover a::before, .navLinks .active::before {
+   width: 100%;
+}
+.navLinks .active::before {
+   width: 100%;
+}
+
+
+/* ------------------------------ header ------------------------------ */
+.header{
+   height: 100vh ;
+   min-height: 100vh;
+   background-image: url(../images/pexels-photo-3914753.jpeg);
+   background-position: center;
+   background-size: cover;
+}
+.overlay{
+   background-color: rgb(0 0 0 / 51%);
+   height: 100%;
+   position: relative;
+}
+.hero-image{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   text-align: center;
+}
+.hero-image h2{
+   font-size: 40px;
+}
+.hero-image p{
+   margin: 20px 0;
+}
+
+.btn{
+   padding: 10px 20px;
+   font-size: 15px;
+   border-radius: 5px;
+   border: 0;
+   margin-top: 20px;
+   cursor: pointer;
+}
+.btn:hover{
+   opacity: 0.9;
+}
+.btn-header-2{
+   background-color: #F52453;
+   color: white;
+   margin-left: 30px;
+}
+
+
+/* ------------------------------ comman  ------------------------------ */
+.section-2-bg{
+   background-color: rgb(221, 221, 221);
+}
+.section{
+   text-align: center;
+   width: 75%;
+   margin: auto;
+   padding: 100px 0;
+   overflow: auto;
+}
+
+.title-line{
+   position: relative;
+   margin-bottom: 70px;
+}
+.title-line::before{
+   content: "";
+   position: absolute;
+   bottom: -10px;
+   width: 30px;
+   height: 4px;
+   background-color: #F52453;
+   transition: .4s;
+}
+.section:hover .title-line::before {
+   width: 70px;
+}
+.line-center::before{
+   left: 50%;
+   transform: translate(-50%);
+}
+
+.line-left::before{
+   left: 0;
+}
+
+/* ------------------------------ section 01 Welcome To Website ------------------------------ */
+
+.welcome{
+   overflow: auto;
+   padding-top: 60px;
+   margin: auto;
+}
+.welcome-icons{
+   width: 100px;
+   height: 100px;
+   background-color: #F52453;
+   border-radius: 50%;
+   margin: -70px auto 20px auto;
+}
+
+.welcome-icons i{
+   color: white;
+   font-size: 50px;
+   line-height: 2;
+}
+.welcome-icons .i-static{
+   display: block;
+}
+.welcome-icons .fa-spin{
+   display: none;
+}
+.section-card:hover .i-static{
+   display: none;
+}
+.section-card:hover .fa-spin{
+   display: block;
+}
+.section-card {
+   width: 32%;
+   padding: 20px;
+   background-color: white;
+   border-bottom: 8px solid #F52453;
+   text-transform: capitalize;
+   float: left;
+   margin: auto;
+}
+.Welcome-card-2{
+   margin: auto 2%;
+}
+.section-card p{
+   margin: 15px 0;
+   color: gray;
+}
+.section-card a{
+   text-decoration: none;
+}
+.section-card a:hover{
+   text-decoration: underline;
+}
+
+
+/* ------------------------------ section 02 Featured Works ------------------------------ */
+.featured{
+   overflow: auto;
+}
+.featured-card{
+   float: left;
+   width: 31%;
+   height: 250px;
+   padding: 15px;
+   position: relative;
+   margin: auto;
+   margin-bottom: 2%;
+}
+.featured-card-2{
+   margin: 0 3.5%;
+}
+.featured-card:hover .featured-overlay{
+   visibility: visible;
+   width: 100%;
+   height: 100%;
+}
+
+.featured-overlay{
+   background-color: rgba(0, 0, 0, 0.507);
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   visibility: hidden;
+   transition: all 0.8s;
+}
+.featured-overlay:hover .featured-content{
+   visibility: visible;
+   width: auto;
+   height: auto;
+}
+.featured-content{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   color: white;
+   text-align: center;
+
+   visibility: hidden;
+   width: auto;
+   height: 0;
+   transform: translate( -50%, -50%) ;
+   transition: all 0.5s;
+}
+.featured-card p{
+   margin: 15px 0;
+}
+.featured-content i{
+   color: white;
+   background-color:#F52453;
+   padding: 10px;
+   cursor: pointer;
+}
+
+
+
+/* ------------------------------ section 03 What We Offer ------------------------------ */
+.offer{
+   overflow: auto;
+}
+.offer-card{
+   width: 30%;
+   float: left;
+   border: 1px solid black;
+   padding: 20px 20px 20px 70px;
+   text-align: left;
+   position: relative;
+   margin-bottom: 40px;
+   transition: .4s;
+
+}
+
+.offer-card:hover {
+   background-color: #292b33;
+   border-radius: 15px;
+}
+.offer-card:hover h3{
+   color: white;
+}
+.offer-card-2{
+   margin: auto 5%;
+}
+.offer-data{
+   overflow: auto;
+}
+.offer-card i{
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   font-size: 25px;
+}
+.offer-card h3{
+   font-size: 20px;
+   margin-bottom: 15px;
+}
+.offer-card p{
+   color: gray;
+}
+
+
+/* ------------------------------ section 04 Why Choose Us ------------------------------ */
+.chooseUs{
+   overflow: auto;
+   text-align: start;
+}
+
+.chooseUs-services{
+   width: 50%;
+   float: left;
+   padding-right: 40px;
+}
+.chooseUs-services .title-line{
+   margin-left: 0;
+}
+.chooseUs-services ul{
+   margin-top: 20px;
+   list-style: none;
+   line-height: 2;
+}
+
+.services-img{
+   width: 50%;
+   float: left;
+   text-align: center;
+}
+.services-img i{
+   font-size: 10px;
+   color: gray;
+   margin-right: 15px;
+}
+.services-img i.active, .services-img i:hover{
+   cursor: pointer;
+   color: #F52453;
+}
+
+
+
+
+
+/* ------------------------------ section 05 statics ------------------------------ */
+.statics-bg{
+   margin-top: -50px;
+   height: 300px;
+   background-image: url(../images/statics.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.statics-overlay{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.548);
+
+   color: white;
+
+   overflow: auto;
+}
+.statics{
+   overflow: auto;
+   width: 75%;
+   margin: 100px auto;
+   text-align: center;
+}
+.static-card{
+   float: left;
+   width: 25%;
+}
+.static-card i{
+   font-size: 30px;
+}
+.static-card h3{
+   font-size: 30px;
+   margin-top: 15px;
+}
+
+
+
+
+/* ------------------------------ section 06 pricing ------------------------------ */
+
+.pricing-plan{
+   width: 32%;
+   border-radius: 10px;
+   padding: 25px;
+   line-height: 1.5;
+   background-color: rgba(41, 43, 51, 0.78);
+   float: left;
+   transition: .5s;
+}
+.pricing-plan1{
+   margin-top: 40px;
+   color: white;
+   border: 1px solid gray;
+}
+.pricing-plan1:hover{
+   background-color: #292b33;
+}
+.pricing-plan2{
+   margin: 10px 2%;
+   background-color: rgba(245, 36, 83, 0.82);
+   line-height: 2.3;
+   color: white;
+}.pricing-plan2:hover{
+   background-color: #f52453;
+}
+.plan-title{
+   font-size: 20px;
+}
+.pricing-circle{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background-color: #f52453;
+   margin: 10px auto;
+   line-height: 3;
+}
+.pricing-plan2 .pricing-circle{
+   background-color: #292b33;
+}
+.pricing-period{
+   margin: -20px 0 20px 100px;
+}
+.price{
+   color: white;
+}
+.price-btn{
+   padding: 10px 20px;
+   font-size: 15px;
+   border-radius: 5px;
+   border: 0;
+   margin-top: 20px;
+   cursor: pointer;
+}
+.price-btn:hover{
+   font-size: 16px;
+}
+.btn-plan1{
+   background-color: #f52453;
+   color: white;
+}
+.btn-plan2{
+   background-color: rgba(255, 255, 255, 0.89);
+   color: #f52453;
+}
+hr{
+   margin: 0 20%;
+}
+
+
+/* ------------------------------ section 07 employee info ------------------------------ */
+.employee-bg{
+   height: 222px;
+   background-image: url(../images/statics.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+.section-employee{
+   width: 75%;
+   margin: 50px auto;
+   /* padding: 70px 0; */
+   overflow: auto;
+}
+.info-half{
+   width: 47%;
+   float: left;
+   text-align: start;
+}
+.info-half-2{
+   margin-left: 6%;
+}
+.employee{
+   overflow: auto;
+}
+.employee-img{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+
+   background-image: url(../images/eng\ islam.jpg);
+   background-size: cover;
+   background-position: center;
+
+   float: left;
+}
+.employee-info{
+   float: left;
+   padding: 15px;
+}
+.employee-paragraph{
+   padding: 15px 0 0 15px;
+}
+
+
+
+
+
+/* ------------------------------ section 08 Our Team ------------------------------ */
+
+.team{
+   overflow: auto;
+   text-transform: capitalize;
+}
+.team-card{
+   width: 30%;
+   background-color: #292b33;
+   padding: 15px;
+   float: left;
+}
+
+.team-card:hover h4{
+   color: white;
+}
+.team-card:hover p{
+   color: #F52453;
+}
+.team-card-2{
+   margin: auto 5%;
+}
+.team-imge{
+   position: relative;
+   overflow: hidden;
+}
+.team-imge img{
+   background-image: url(../images/eng\ islam.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.social-icons{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   visibility: hidden;
+   width: 0;
+   height: 100%;
+   transition: 0.4s;
+   z-index: 2;
+}
+.social-icons::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 0;
+   height: 100%;
+   background-color: rgb(255 255 255 / 40%);
+   transition: .7s;
+   z-index: -1;
+}
+.team-card:hover .social-icons{
+   visibility: visible;
+   width: 100%;
+}
+.team-card:hover .social-icons::before{
+   visibility: visible;
+   width: 100%;
+}
+.social-icons a{
+   text-decoration: none;
+   display: block;
+   width: 35px;
+   height: 35px;
+   padding: 10px;
+   margin-left: auto;
+   background-color: #F52453;
+}
+.social-icons a:hover i{
+   color: white;
+}
+.social-icons i{
+   color: rgb(255 255 255 / 75%);
+}
+
+.team-card h4{
+   margin: 10px auto ;
+   color: rgb(255 255 255 / 75%);
+}
+.team-card p{
+   color: rgb(128 128 128 / 75%);
+}
+
+
+/* ------------------------------ section 08 Recent News ------------------------------ */
+.news-section{
+   background-color: #e0e5eb;
+}
+.news-card{
+   width: 30%;
+   float: left;
+   text-align: start;
+   border-left: 1px solid #F52453 ;
+   background-color: white;
+   transition: .5s;
+}
+.news-card:hover{
+   border-left: 8px solid #F52453 ;
+}
+.news-card-2{
+   margin: auto 5%;
+}
+.news-content{
+   padding: 15px;
+}
+.news-info{
+   overflow: auto;
+   margin: 0 0 25px 0;
+}
+.news-info p{
+   float: left;
+   margin-right: 5%;
+   font-size: 12px;
+}
+.news-paragraph{
+   margin: 15px 0;
+   color: gray;
+}
+.news-content a{
+   text-decoration: none;
+}
+.news-content a:hover{
+   text-decoration: underline;
+}
+
+/* ------------------------------ section 08 Recent News ------------------------------ */
+.footer-bg{
+   background-color: #292b33;
+   text-align: center;
+}
+.footer{
+   overflow: auto;
+   margin: auto;
+}
+.line-footer{
+   margin: 0;
+}
+.footer-info{
+   width: 50%;
+   text-align: start;
+   float: left;
+   color: white;
+}
+.footer-info p{
+   margin: 20px 0;
+   font-size: 18px;
+   line-height: 1.5;
+}
+.social-contact a{
+   text-decoration: none;
+}
+.social-contact i{
+   width: 35px;
+   height: 35px;
+   line-height: 35px;
+   border-radius: 50%;
+   background-color: #191a1f;
+   margin-right: 15px;
+   color: white;
+   text-align: center;
+   transition: .5s;
+}
+.social-contact i:hover{
+   background-color: #F52453;
+}
+
+.footer-contact{
+   width: 50%;
+   float: left;
+}
+input, textarea{
+   width: 100%;
+   font-size: 18px;
+   padding: 10px;
+   margin-bottom: 15px;
+   outline: none;
+   border: none;
+   border-bottom: 5px solid #F52453;
+}
+.btn-submit{
+   width: 100%;
+   border-radius: 0;
+   background-color: #F52453;
+   margin-top: 0%;
+   color: white;
+}
+
+.copyright{
+   background-color: #191a1f;
+   color: gray;
+   padding: 20px 0;
+}
